@@ -311,7 +311,7 @@ namespace Disqord
             {
                 var guilds = State._guilds.Values;
                 Log(LogMessageSeverity.Information, $"Awaiting sync for {guilds.Count} guilds.");
-                await Task.WhenAll(guilds.Select(x => x.SyncTcs.Task)).ConfigureAwait(false);
+                //await Task.WhenAll(guilds.Select(x => x.SyncTcs.Task)).ConfigureAwait(false);
             }
 
             if (_shard == null)
